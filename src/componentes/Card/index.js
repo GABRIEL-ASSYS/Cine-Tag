@@ -1,13 +1,29 @@
 import React from 'react'
 import styles from './Card.module.css'
 import iconeFavoritar from './favoritar.png'
+import { FavoritosContext } from 'contextos/Favoritos'
+import iconeDesfavoritar from './desfavoritar.png'
+import { Link } from 'react-router-dom'
 
 export default function Card({ id, titulo, capa }) {
+  const { favorito, adicionarFavorito } = FavoritosContext()
+  const ehFavorito = favorito.some((fav) => fav.id === id)
+  const icone = !ehFavorito ? iconeFavoritar : iconeDesfavoritar
+
   return (
     <div className={styles.container}>
-        <img src={capa} alt={titulo} className={styles.capa}/>
+      <Link className={styles.link} to={`/${id}`}>
+        <img src={capa} alt={titulo} className={styles.capa} />
         <h2>{titulo}</h2>
-        <img src={iconeFavoritar} alt='Favoritar imagem' className={styles.favoritar}/>
+      </Link>
+      <img
+        src={icone}
+        alt='Favoritar imagem'
+        className={styles.favoritar}
+        onClick={() => {
+          adicionarFavorito({ id, titulo, capa })
+        }}
+      />
     </div>
   )
 }
