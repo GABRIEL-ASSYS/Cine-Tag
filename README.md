@@ -1,6 +1,6 @@
 # Cine Tag
 
-  Cine Tag é um projeto desenvolvido durante um curso da plataforma alura com o objetivo de auxiliar no aprendizado de desenvolvimento WEB utilizando React.js, sendo uma página WEB que contém filmes que você pode favoritar, o foco deste projeto é o uso de ContextAPI, criando contextos e tmbám hooks personalizados.
+  Cine Tag é um projeto desenvolvido durante um curso da plataforma alura com o objetivo de auxiliar no aprendizado de desenvolvimento WEB utilizando React.js, sendo uma página WEB que contém filmes que você pode favoritar, o foco deste projeto é uma revisão dos principais conceitos do React.js como o uso de ContextAPI, criar contextos e também hooks personalizados, o uso de Hooks como useState, useEffect, useContext, useParams, além do uso de componentes e também o uso de rotas.
   
 ## 🚀 Começando
 
